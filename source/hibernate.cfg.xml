@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://3rd.life.powerbox:3307/microclouds</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">zappa</property>
+<property name="hibernate.connection.pool_size">10</property>
+<property name="show_sql">false</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.current_session_context_class">thread</property>
+<property name="hibernate.hbm2ddl.auto">validate</property>
+
+<mapping class="org.microcloud.manager.core.model.datacenter.Host"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.HostBusyTimes"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.Rack"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.MicroCloud"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.MicroCloudAttributes"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.MicroCloudProfile"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.MicroCloudProfileNode"/>
+<mapping class="org.microcloud.manager.core.model.datacenter.LocPoint"/>
+
+<mapping class="org.microcloud.manager.core.model.datasource.DataSource"/>
+<mapping class="org.microcloud.manager.core.model.datasource.DataSourceTech"/>
+
+<mapping class="org.microcloud.manager.core.model.workeralgorithm.WorkerAlgorithm"/>
+<mapping class="org.microcloud.manager.core.model.workeralgorithm.WorkerAlgorithmProfileNode"/>
+
+<mapping class="org.microcloud.manager.core.model.streammine.ManagerTask"/>
+
+</session-factory>
+</hibernate-configuration>
